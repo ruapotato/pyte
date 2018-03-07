@@ -1,5 +1,5 @@
 .. -*- mode: rst -*-
-
+Small bug fix in streams.py... this alows you to run w3m in pyte. :)
 ::
 
                        _

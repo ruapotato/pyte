@@ -321,7 +321,7 @@ class Stream(object):
                             current = ""
                         else:
                             if private:
-                                csi_dispatch[char](*params, private=True)
+                                csi_dispatch[char](*params)
                             else:
                                 csi_dispatch[char](*params)
                             break  # CSI is finished.
