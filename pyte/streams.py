@@ -323,7 +323,11 @@ class Stream(object):
                             if private:
                                 csi_dispatch[char](*params)
                             else:
-                                csi_dispatch[char](*params)
+                                #fix for crash on some switch cmds
+                                try:
+                                    csi_dispatch[char](*params)
+                                except Exception:
+                                    pass
                             break  # CSI is finished.
             elif char == OSC_C1:
                 code = yield
